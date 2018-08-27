@@ -1,13 +1,5 @@
 import React, {Component} from "react";
-import {connect} from "react-redux";
-import {bindActionCreators} from 'redux';
 import Link from 'next/link';
-
-import {
-    fetchProjects,
-    fetchProjectDetails
-} from '../actions/projectsAction';
-
 
 class Page extends Component {
     static async getInitialProps({query}) {
@@ -31,15 +23,4 @@ class Page extends Component {
 
 }
 
-const mapStateToProps = (state) => ({
-    projectList: state.project.projectList,
-    projectDetails: state.project.projectDetails
-});
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchProjects: fetchProjects,
-    fetchProjectDetails: fetchProjectDetails
-}, dispatch);
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default Page;

@@ -1,18 +1,23 @@
 [
   {
     "word": "baum",
-    "translation":"Arbol",
+    "translations":[
+      {
+        "lang":"es",
+        "translation": "arbol"
+      },
+      {
+        "lang":"en",
+        "translation": "tree"
+      }
+    ],
     "searchKey": "baum, bäume",
     //Depending of the type we put different words here, for verbs the list of conjugations, for example.
     "type": "noun",
     //[noun, verb, adjetive, modal verb, local preposition]
     "nounProps": {
       "article": "der",
-      "plural": "bäume",
-      "nominative_example": "sentence",
-      "accusative_example": "sentence",
-      "dative_example": "sentence",
-      "genitive_example": "sentence"
+      "plural": "bäume"
     },
     "verbProps": {},
     "adjetiveProps": {}

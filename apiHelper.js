@@ -1,13 +1,11 @@
 import axios from 'axios';
 
-import searchResult from './searchResult';
-
 const apiHelper = {
-    fetchProjects: (orgName) => {
-        return axios.get(`https://api.github.com/orgs/${orgName}/repos`)
+    searchByKeyword: (payload) => {
+        return axios.get(`http://localhost:7000/api/v1/dictionary/${payload.keyword}/${payload.lang}`)
     },
-    fetchContributors: (url) => {
-        return axios.get(url)
+    addNewWord: (word) => {
+        return axios.post(`http://localhost:7000/api/v1/dictionary`, word)
     }
 }
 

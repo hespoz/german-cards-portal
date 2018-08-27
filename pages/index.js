@@ -4,13 +4,8 @@ import {bindActionCreators} from 'redux';
 import Link from 'next/link';
 import {Container, Header, Grid, Menu, List, Card, Flag, Input} from 'semantic-ui-react'
 import Layout from '../components/Layout';
-import Search from '../components/Search';
+import Search from '../components/search/Search';
 import NewCard from '../components/NewCard';
-
-import {
-    fetchProjects,
-    fetchProjectDetails
-} from '../actions/projectsAction';
 
 
 class Index extends Component {
@@ -22,7 +17,7 @@ class Index extends Component {
      */
     static async getInitialProps({store, isServer}) {
 
-        await store.execSagaTasks(isServer, dispatch => {
+        /*await store.execSagaTasks(isServer, dispatch => {
             dispatch(fetchProjects());
         });
 
@@ -36,7 +31,7 @@ class Index extends Component {
         return {
             projectList: store.getState().project.projectList,
             projectDetails: store.getState().project.projectDetails
-        };
+        };*/
     }
 
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
@@ -64,15 +59,5 @@ class Index extends Component {
 
 }
 
-const mapStateToProps = (state) => ({
-    projectList: state.project.projectList,
-    projectDetails: state.project.projectDetails
-});
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchProjects: fetchProjects,
-    fetchProjectDetails: fetchProjectDetails
-}, dispatch);
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default Index;

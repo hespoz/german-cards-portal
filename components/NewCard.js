@@ -4,10 +4,6 @@ import {bindActionCreators} from 'redux';
 import Link from 'next/link';
 import {Grid, List, Card} from 'semantic-ui-react'
 
-import {
-    fetchProjects,
-    fetchProjectDetails
-} from '../actions/projectsAction';
 import WordAdded from "./WordAdded";
 import ScrollContainer from "./ScrollContainer";
 
@@ -177,15 +173,4 @@ class NewCard extends Component {
 
 }
 
-const mapStateToProps = (state) => ({
-    projectList: state.project.projectList,
-    projectDetails: state.project.projectDetails
-});
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchProjects: fetchProjects,
-    fetchProjectDetails: fetchProjectDetails
-}, dispatch);
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(NewCard);
+export default NewCard;

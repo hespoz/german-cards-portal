@@ -1,8 +1,8 @@
 
 import { combineReducers } from "redux"
 
-import project from "./projectReducer"
+import dictionary from "./dictionaryReducer"
 
 export default combineReducers({
-    project
+    dictionary
 })
