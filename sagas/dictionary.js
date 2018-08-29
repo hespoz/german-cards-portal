@@ -3,12 +3,14 @@ import { SEARCH_BY_KEYWORD } from "../constants";
 import apiHelper from '../apiHelper'
 
 import {
+    searchByKeywordLoading,
     searchByKeywordSuccess,
     searchByKeywordError
 } from '../actions/dictionaryAction';
 
 function* searchByKeyword(action) {
     try {
+        yield put(searchByKeywordLoading())
         let result = []
         if(action.payload.keyword !== '') {
             const res = yield call(apiHelper.searchByKeyword, action.payload)

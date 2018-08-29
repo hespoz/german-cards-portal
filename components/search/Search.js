@@ -6,6 +6,7 @@ import {Grid, List, Input, Message } from 'semantic-ui-react'
 
 import {
     searchByKeyword,
+    openSearch,
     closeSearch
 } from '../../actions/dictionaryAction'
 import NewWordModal from "../add_word/NewWordModal";
@@ -19,19 +20,23 @@ class Search extends Component {
 
     onSearchInputChange = (e, data) => {
         this.setState({keyword: data.value}, () => {
-            this.props.searchByKeyword(this.state.keyword, 'de')
+            this.props.searchByKeyword(this.state.keyword, false)
         })
     }
 
     onSearchInputFocus = () => {
-        this.props.searchByKeyword(this.state.keyword, 'de')
+        this.props.openSearch()
+        this.props.searchByKeyword(this.state.keyword, false)
     }
 
     onClose = () => {
         this.props.closeSearch()
     }
 
+    closeDialog = () => this.setState({ openAddNewWordDialog: false })
+
     addNewWord = () => {
+        this.props.closeSearch()
         this.setState({openAddNewWordDialog:true})
     }
 
@@ -42,7 +47,7 @@ class Search extends Component {
         return (
             <div>
 
-                <NewWordModal open={this.state.openAddNewWordDialog}/>
+                <NewWordModal open={this.state.openAddNewWordDialog} onClose={this.closeDialog}/>
 
                 {open ?
                     <div id={"overlay"} onClick={this.onClose}>
@@ -145,7 +150,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
     searchByKeyword: searchByKeyword,
-    closeSearch: closeSearch
+    closeSearch: closeSearch,
+    openSearch: openSearch
 }, dispatch);
 
 

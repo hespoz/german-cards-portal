@@ -1,108 +1,175 @@
 import React, {Component} from "react";
-import { Card, Flag, Table, Button} from 'semantic-ui-react'
+import {Card, Flag, Table, Button, Input, Form} from 'semantic-ui-react'
 import {get} from 'lodash';
 
 import ViewMore from "./ViewMore";
 
-
-const getFlagCode = (lang) => {
-    switch (lang) {
-        case 'en':
-            return 'gb'
-        case 'es':
-            return 'es'
-        default:
-            return 'gb'
-    }
-}
-
-
-const renderConjugation = (wordItem) => {
-
-    console.log('conjugation',get(wordItem, 'verbProps.conjugation_present'))
-    if (get(wordItem, 'verbProps.conjugation_present') === undefined || get(wordItem, 'verbProps.conjugation_present').length === 0) {
-        return null
-    }
-
-    return <Table celled>
-
-        <Table.Header>
-            <Table.Row>
-                <Table.HeaderCell textAlign={'center'}>Pronoum</Table.HeaderCell>
-                <Table.HeaderCell textAlign={'center'}>Conjugation</Table.HeaderCell>
-            </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-            {get(wordItem, 'verbProps.conjugation_present').map((item, index) => {
-                return <Table.Row key={index}>
-                    <Table.Cell textAlign={'center'}>{item.pronoum}</Table.Cell>
-                    <Table.Cell textAlign={'center'}>{item.conjugation}</Table.Cell>
-                </Table.Row>
-            })}
-        </Table.Body>
-
-    </Table>
-}
-
-const renderTranslations = (wordItem) => {
-
-    if (get(wordItem, 'translations') === undefined) {
-        return null
-    }
-
-    return <Table celled>
-
-        <Table.Header>
-            <Table.Row>
-                <Table.HeaderCell>Translation</Table.HeaderCell>
-                <Table.HeaderCell>Description</Table.HeaderCell>
-            </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-            {get(wordItem, 'translations').map((translation, index) => {
-                return <Table.Row key={index}>
-                    <Table.Cell><Flag name={`${getFlagCode(translation.lang)}`}/> {translation.translation}
-                    </Table.Cell>
-                    <Table.Cell>{translation.description}</Table.Cell>
-                </Table.Row>
-            })}
-        </Table.Body>
-
-    </Table>
-
-}
-
-const generateHeader = (item) => {
-
-    switch (item.type) {
-        case 'noun':
-            return `${item.nounProps.article} ${item.word}`
-        case 'verb':
-            return `${item.word} - ${item.verbProps.perfect}`
-        default:
-            return ''
-    }
-}
-
+const options = [
+    {key: 'es', text: 'Spanish', value: 'es'},
+    {key: 'en', text: 'English', value: 'en'},
+    {key: 'it', text: 'Italian', value: 'it'},
+    {key: 'fr', text: 'French', value: 'fr'},
+    {key: 'ru', text: 'Russian', value: 'ru'}
+]
 
 class WordDescription extends Component {
 
+    state = {
+        newTransaltionFormOpen: false
+    }
+
+    getFlagCode = (lang) => {
+        switch (lang) {
+            case 'en':
+                return 'gb'
+            case 'es':
+                return 'es'
+            default:
+                return 'gb'
+        }
+    }
+
+    renderAddNewTranslation = () => {
+        return <Form onSubmit={() => console.log(1)}>
+            <Form.Group widths='equal'>
+                <Form.Select label='Language' options={options} placeholder='Select language'/>
+                <Form.Field
+                    control={Input}
+                    label='Translation'
+                    placeholder='Translation'
+                />
+            </Form.Group>
+            <Form.Group widths='equal'>
+                <Form.Button content='Submit' />
+            </Form.Group>
+        </Form>
+    }
+
+    generateHeader = (item) => {
+
+        switch (item.type) {
+            case 'noun':
+                return `${item.article} ${item.word} - plural: die ${item.plural}`
+            case 'verb':
+                return `${item.word} - ${item.perfect}`
+            default:
+                return ''
+        }
+    }
+
+    renderConjugation = (wordItem) => {
+
+        const conjugations = get(wordItem, 'conjugation_present')
+
+        if (conjugations === undefined || conjugations.length === 0) {
+            return null
+        }
+
+        return <Table celled>
+
+            <Table.Header>
+                <Table.Row>
+                    <Table.HeaderCell textAlign={'center'}>Pronoum</Table.HeaderCell>
+                    <Table.HeaderCell textAlign={'center'}>Conjugation</Table.HeaderCell>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Body>
+                {conjugations.map((item, index) => {
+                    return <Table.Row key={index}>
+                        <Table.Cell textAlign={'center'}>{item.pronoum}</Table.Cell>
+                        <Table.Cell textAlign={'center'}>{item.conjugation}</Table.Cell>
+                    </Table.Row>
+                })}
+            </Table.Body>
+
+        </Table>
+    }
+
+    renderAddMore = () => {
+        return <div id="translation-container">
+            <div id="add-translation-container">
+                <a href={"javascript:void(0)"}
+                   onClick={() => this.setState({newTransaltionFormOpen: !this.state.newTransaltionFormOpen})}>
+                    {!this.state.newTransaltionFormOpen ?
+                        "Add new translation"
+                        :
+                        "close"
+                    }
+                </a>
+            </div>
+            {this.state.newTransaltionFormOpen ?
+                <div>
+                    {this.renderAddNewTranslation()}
+                </div>
+                :
+                null
+            }
+
+            <style jsx>{`
+
+                  #translation-container {
+                    display:flex;
+                    flex-direction:column;
+                  }
+
+                  #add-translation-container {
+                        display: flex;
+                        justify-content: flex-end;
+                  }
+
+        `}</style>
+
+
+        </div>
+    }
+
+    renderTranslations = (wordItem) => {
+
+        const translations = get(wordItem, 'translations')
+        if (translations === undefined) {
+            return null
+        }
+
+        return <Table celled>
+
+            <Table.Header>
+                <Table.Row>
+                    <Table.HeaderCell>Translation</Table.HeaderCell>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Body>
+                {get(wordItem, 'translations').map((translation, index) => {
+                    return <Table.Row key={index}>
+                        <Table.Cell><Flag
+                            name={`${this.getFlagCode(translation.lang)}`}/> {translation.translation.join(",")}
+                        </Table.Cell>
+                    </Table.Row>
+                })}
+            </Table.Body>
+
+        </Table>
+
+    }
 
     render() {
 
-        const { wordItem } = this.props
+        const {wordItem} = this.props
 
         return (
 
             <Card fluid>
-                <Card.Content header={generateHeader(wordItem)}/>
+                <Card.Content header={this.generateHeader(wordItem)}/>
                 <Card.Content>
+
+                    {this.renderAddMore()}
+
                     <ViewMore initialHeight={'145px'}>
-                        {renderTranslations(wordItem)}
-                        {renderConjugation(wordItem)}
+                        {this.renderTranslations(wordItem)}
+                        {this.renderConjugation(wordItem)}
                     </ViewMore>
+
                 </Card.Content>
                 <Card.Content extra>
                     <Button basic fluid color='blue'>
