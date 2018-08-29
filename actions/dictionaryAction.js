@@ -4,7 +4,8 @@ import {
     SEARCH_BY_KEYWORD_ERROR,
     ADD_NEW_WORD,
     ADD_NEW_WORD_SUCCESS,
-    ADD_NEW_WORD_ERROR
+    ADD_NEW_WORD_ERROR,
+    CLOSE_SEARCH
 } from '../constants'
 
 export const searchByKeyword = (keyword, lang) => ({
@@ -36,4 +37,8 @@ export const addNewWordSuccess = (data) => ({
 export const addNewWordError = (data) => ({
     type:ADD_NEW_WORD_ERROR,
     payload: data
+})
+
+export const closeSearch = () => ({
+    type:CLOSE_SEARCH
 })
