@@ -86,44 +86,6 @@ class WordDescription extends Component {
         </Table>
     }
 
-    renderAddMore = () => {
-        return <div id="translation-container">
-            <div id="add-translation-container">
-                <a href={"javascript:void(0)"}
-                   onClick={() => this.setState({newTransaltionFormOpen: !this.state.newTransaltionFormOpen})}>
-                    {!this.state.newTransaltionFormOpen ?
-                        "Add new translation"
-                        :
-                        "close"
-                    }
-                </a>
-            </div>
-            {this.state.newTransaltionFormOpen ?
-                <div>
-                    {this.renderAddNewTranslation()}
-                </div>
-                :
-                null
-            }
-
-            <style jsx>{`
-
-                  #translation-container {
-                    display:flex;
-                    flex-direction:column;
-                  }
-
-                  #add-translation-container {
-                        display: flex;
-                        justify-content: flex-end;
-                  }
-
-        `}</style>
-
-
-        </div>
-    }
-
     renderTranslations = (wordItem) => {
 
         const translations = get(wordItem, 'translations')
@@ -162,8 +124,6 @@ class WordDescription extends Component {
             <Card fluid>
                 <Card.Content header={this.generateHeader(wordItem)}/>
                 <Card.Content>
-
-                    {this.renderAddMore()}
 
                     <ViewMore initialHeight={'145px'}>
                         {this.renderTranslations(wordItem)}
