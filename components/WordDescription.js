@@ -69,7 +69,7 @@ class WordDescription extends Component {
 
             <Table.Header>
                 <Table.Row>
-                    <Table.HeaderCell textAlign={'center'}>Pronoum</Table.HeaderCell>
+                    <Table.HeaderCell textAlign={'center'}>Pronou</Table.HeaderCell>
                     <Table.HeaderCell textAlign={'center'}>Conjugation</Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
@@ -77,7 +77,7 @@ class WordDescription extends Component {
             <Table.Body>
                 {conjugations.map((item, index) => {
                     return <Table.Row key={index}>
-                        <Table.Cell textAlign={'center'}>{item.pronoum}</Table.Cell>
+                        <Table.Cell textAlign={'center'}>{item.pronoun}</Table.Cell>
                         <Table.Cell textAlign={'center'}>{item.conjugation}</Table.Cell>
                     </Table.Row>
                 })}

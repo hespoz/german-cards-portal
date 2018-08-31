@@ -11,7 +11,8 @@ import {
     ADD_NEW_WORD_SUCCESS,
     ADD_NEW_WORD_ERROR,
     CLOSE_SEARCH,
-    OPEN_SEARCH
+    OPEN_SEARCH,
+    ADD_NEW_WORD_CLEAR
 } from '../constants'
 
 export const searchByExactKeyword = (keyword) => ({
@@ -56,6 +57,10 @@ export const searchByKeywordError = (data) => ({
 export const addNewWord = (data) => ({
     type: ADD_NEW_WORD,
     payload: data
+})
+
+export const addNewWordClear = () => ({
+    type: ADD_NEW_WORD_CLEAR
 })
 
 export const addNewWordSuccess = (data) => ({

@@ -4,7 +4,10 @@ import {
     CLOSE_SEARCH,
     OPEN_SEARCH,
     SEARCH_BY_KEYWORD_LOADING,
-    SEARCH_BY_EXACT_KEYWORD_LOADING
+    SEARCH_BY_EXACT_KEYWORD_LOADING,
+    ADD_NEW_WORD_CLEAR,
+    ADD_NEW_WORD_SUCCESS,
+    ADD_NEW_WORD_ERROR
 } from "../constants";
 
 export default function reducer(state = {
@@ -13,7 +16,9 @@ export default function reducer(state = {
     exactSearchTriggered:false,
     loadingExact:false,
     open:false,
-    loading:false
+    loading:false,
+    successAddWord: false,
+    errorAddWord:false
 }, action) {
     switch (action.type) {
         case SEARCH_BY_KEYWORD_SUCCESS:
@@ -31,6 +36,29 @@ export default function reducer(state = {
                 exactSearchTriggered:true
             }
             break;
+        case ADD_NEW_WORD_CLEAR:
+            return {
+                ...state,
+                successAddWord: false,
+                errorAddWord: false,
+                exactResult:null,
+                loadingExact:false,
+                exactSearchTriggered:false
+            }
+            break;
+        case ADD_NEW_WORD_SUCCESS:
+            return {
+                ...state,
+                successAddWord: true,
+                exactResult:action.payload
+            }
+            break;
+        case ADD_NEW_WORD_ERROR:
+            return {
+                ...state,
+                errorAddWord: true
+            }
+            break;
         case CLOSE_SEARCH:
             return {
                 ...state,
@@ -38,7 +66,9 @@ export default function reducer(state = {
                 loading:false,
                 exactResult:null,
                 loadingExact:false,
-                exactSearchTriggered:false
+                exactSearchTriggered:false,
+                successAddWord: false,
+                errorAddWord: false
             }
             break;
         case OPEN_SEARCH:

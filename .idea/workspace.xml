@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18420511-595f-46aa-b4bf-6147ff45b6a0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/add_word/NewWordForm.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/actions/dictionaryAction.js" afterPath="$PROJECT_DIR$/actions/dictionaryAction.js" />
-      <change beforePath="$PROJECT_DIR$/apiHelper.js" afterPath="$PROJECT_DIR$/apiHelper.js" />
       <change beforePath="$PROJECT_DIR$/components/WordDescription.js" afterPath="$PROJECT_DIR$/components/WordDescription.js" />
-      <change beforePath="$PROJECT_DIR$/components/add_word/NewWordModal.js" afterPath="$PROJECT_DIR$/components/add_word/NewWordModal.js" />
+      <change beforePath="$PROJECT_DIR$/components/add_word/NewWordForm.js" afterPath="$PROJECT_DIR$/components/add_word/NewWordForm.js" />
       <change beforePath="$PROJECT_DIR$/constants.js" afterPath="$PROJECT_DIR$/constants.js" />
       <change beforePath="$PROJECT_DIR$/reducers/dictionaryReducer.js" afterPath="$PROJECT_DIR$/reducers/dictionaryReducer.js" />
       <change beforePath="$PROJECT_DIR$/sagas/dictionary.js" afterPath="$PROJECT_DIR$/sagas/dictionary.js" />
@@ -24,33 +22,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewWordForm.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewWordForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/add_word/NewWordForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+            <state relative-caret-position="-540">
+              <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1535631556000" expanded="true" signature="2329:5404" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="2347:2846" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="2370:2827" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="2399:2803" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="2476:2790" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="2987:5404" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="3143:3400" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="3262:3387" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="3533:4866" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="3571:3861" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="3823:3848" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="3898:4155" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="4117:4142" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="4192:4496" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="4458:4483" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="4533:4837" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="4799:4824" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="4999:5055" ph="..." />
-                <marker date="1535631556000" expanded="true" signature="5205:5291" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordDescription.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/WordDescription.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,6 +52,11 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addNewWord</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,14 +87,14 @@
         <option value="$PROJECT_DIR$/components/ViewMore.js" />
         <option value="$PROJECT_DIR$/components/NewWordModal.js" />
         <option value="$PROJECT_DIR$/components/search/Search.js" />
-        <option value="$PROJECT_DIR$/components/WordDescription.js" />
+        <option value="$PROJECT_DIR$/apiHelper.js" />
+        <option value="$PROJECT_DIR$/components/add_word/NewWordModal.js" />
+        <option value="$PROJECT_DIR$/sagas/dictionary.js" />
         <option value="$PROJECT_DIR$/constants.js" />
         <option value="$PROJECT_DIR$/actions/dictionaryAction.js" />
-        <option value="$PROJECT_DIR$/sagas/dictionary.js" />
-        <option value="$PROJECT_DIR$/apiHelper.js" />
         <option value="$PROJECT_DIR$/reducers/dictionaryReducer.js" />
-        <option value="$PROJECT_DIR$/components/add_word/NewWordModal.js" />
         <option value="$PROJECT_DIR$/components/add_word/NewWordForm.js" />
+        <option value="$PROJECT_DIR$/components/WordDescription.js" />
       </list>
     </option>
   </component>
@@ -236,18 +230,18 @@
       <workItem from="1535114145719" duration="3618000" />
       <workItem from="1535357777927" duration="2305000" />
       <workItem from="1535364320635" duration="14496000" />
-      <workItem from="1535446075594" duration="31788000" />
+      <workItem from="1535446075594" duration="42771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91436000" />
+    <option name="totallyTimeSpent" value="102419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-366" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.109531336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13902053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -255,7 +249,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16424116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06652807" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -311,7 +305,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#384#0" expanded="false" />
+            <element signature="e#0#408#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -528,67 +522,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/WordDescription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="108" column="37" lean-forward="true" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sagas/dictionary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#63#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/dictionaryAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#384#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/add_word/NewWordModal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reducers/dictionaryReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#201#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -602,32 +540,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apiHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sagas/dictionary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reducers/dictionaryReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#275#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/dictionaryAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#408#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/add_word/NewWordForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+        <state relative-caret-position="-540">
+          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1535631556000" expanded="true" signature="2329:5404" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="2347:2846" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="2370:2827" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="2399:2803" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="2476:2790" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="2987:5404" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="3143:3400" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="3262:3387" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="3533:4866" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="3571:3861" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="3823:3848" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="3898:4155" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="4117:4142" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="4192:4496" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="4458:4483" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="4533:4837" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="4799:4824" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="4999:5055" ph="..." />
-            <marker date="1535631556000" expanded="true" signature="5205:5291" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/WordDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
