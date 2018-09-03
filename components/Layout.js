@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Link from 'next/link';
-import {Container, Header, Grid, Menu, Flag} from 'semantic-ui-react'
+import { Header, Menu, Flag} from 'semantic-ui-react'
 import { withRouter } from 'next/router'
 
 class Layout extends Component {
@@ -10,58 +10,56 @@ class Layout extends Component {
         const { router } = this.props;
 
         return (
-            <div>
+            <div className={'container'}>
 
-                <Container>
+                <div className={'row'}>
+                    <div className={'col-md-12 col-lg-12'}>
+                        <Menu fluid pointing secondary>
 
-                    <Grid centered columns={1}>
-                        <Grid.Row>
-                            <Grid.Column>
+                            <Menu.Menu position='left'>
 
-                                <Menu pointing secondary>
+                                <Menu.Item>
+                                    <Header as='h3'>Germano</Header>
+                                </Menu.Item>
 
-                                    <Menu.Menu position='left'>
+                            </Menu.Menu>
 
-                                        <Menu.Item>
-                                            <Header as='h3'>Germano</Header>
-                                        </Menu.Item>
+                            <Menu.Menu position='right'>
+                                <Menu.Item active={router.pathname === '/'}>
+                                    <Link as={'/'} href={`/`}>
+                                        <a>Inicio</a>
+                                    </Link>
+                                </Menu.Item>
+                                <Menu.Item active={router.pathname === '/cards'}>
+                                    <Link as={'/cards'} href={`/cards`}>
+                                        <a>Sign In</a>
+                                    </Link>
+                                </Menu.Item>
 
-                                    </Menu.Menu>
+                                <Menu.Item>
+                                    <Flag name={'gb'}/>
+                                    <Flag name={'es'}/>
+                                </Menu.Item>
 
-                                    <Menu.Menu position='right'>
-                                        <Menu.Item active={router.pathname === '/'}>
-                                            <Link as={'/'} href={`/`}>
-                                                <a>Inicio</a>
-                                            </Link>
-                                        </Menu.Item>
-                                        <Menu.Item active={router.pathname === '/cards'}>
-                                            <Link as={'/cards'} href={`/cards`}>
-                                                <a>Cards</a>
-                                            </Link>
-                                        </Menu.Item>
+                            </Menu.Menu>
+                        </Menu>
+                    </div>
+                </div>
 
-                                        <Menu.Item>
-                                            <Flag name={'gb'}/>
-                                            <Flag name={'es'}/>
-                                        </Menu.Item>
+                <div className={'row '}>
+                    <div className={'col-12 content-page'}>
+                        {this.props.children}
+                    </div>
+                </div>
 
-                                    </Menu.Menu>
-                                </Menu>
+                <style jsx>{`
 
-
-                            </Grid.Column>
-                        </Grid.Row>
-                        <Grid.Row>
-                            <Grid.Column>
-                                {this.props.children}
-                            </Grid.Column>
-                        </Grid.Row>
-
-
-                    </Grid>
+                  .content-page {
+                    padding-top:8px;
+                  }
 
 
-                </Container>
+                `}</style>
 
             </div>
         )

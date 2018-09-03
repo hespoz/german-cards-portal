@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import Link from 'next/link';
-import {Container, Header, Grid, Menu, List, Card, Flag, Input} from 'semantic-ui-react'
+import { Responsive, Segment } from 'semantic-ui-react'
 import Layout from '../components/Layout';
 import Search from '../components/search/Search';
 import NewCard from '../components/NewCard';
@@ -42,16 +42,14 @@ class Index extends Component {
 
             <Layout>
 
+                <div className={'row'}>
+                    <div className={'col-12'}>
+                        <Search/>
+                    </div>
+                </div>
 
-                <Search/>
 
-                <Grid>
-                    <Grid.Row>
-                        <Grid.Column width={16}>
-                            <NewCard/>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
+
 
             </Layout>
         )

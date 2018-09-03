@@ -29,8 +29,10 @@ class Search extends Component {
         this.props.searchByKeyword(this.state.keyword, false)
     }
 
-    onClose = () => {
-        this.props.closeSearch()
+    onClose = (e) => {
+        if (e.target.id === "container-results" || e.target.id === "overlay") {
+            this.props.closeSearch()
+        }
     }
 
     closeDialog = () => this.setState({ openAddNewWordDialog: false })
@@ -57,60 +59,52 @@ class Search extends Component {
                 }
                 <div id={"search"}>
 
-                    <Grid>
-
-                        <Grid.Row>
-                            <Grid.Column width={10}>
-                                <Input icon='search'
-                                       placeholder='Search...' fluid
-                                       onChange={this.onSearchInputChange}
-                                       onFocus={this.onSearchInputFocus}
-                                       value={this.state.keyword}/>
-                            </Grid.Column>
-
-
-                        </Grid.Row>
-
-                        {open ?
-                            <Grid.Row>
-                                <Grid.Column>
-
-                                    {searchResult.length === 0 && this.state.keyword.length > 0 ?
-
-                                        <Message fluid>
-                                            <Message.Header>Opss!</Message.Header>
-                                            <p>That word does not exist in our database, please add it!</p>
-                                            <a href={"javascript:void(0)"} onClick={this.addNewWord}>Add keyword</a>
-                                        </Message>
-
-                                        :
+                    <div className={'row'}>
+                        <div className={'col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3'}>
+                            <Input icon='search'
+                                   size='small'
+                                   placeholder='Search...' fluid
+                                   onChange={this.onSearchInputChange}
+                                   onFocus={this.onSearchInputFocus}
+                                   value={this.state.keyword}/>
+                        </div>
+                    </div>
 
 
-                                        <List>
+                    {open ?
 
-                                            {searchResult.map((item, index) => {
-                                                return <WordDescription wordItem={item}/>
-                                            })}
+                        <div id="container-results" className={'row'} onClick={this.onClose}>
+                            <div className={'col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'}>
+                                {searchResult.length === 0 && this.state.keyword.length > 0 ?
 
-                                        </List>
+                                    <Message fluid>
+                                        <Message.Header>Opss!</Message.Header>
+                                        <p>That word does not exist in our database, please add it!</p>
+                                        <a href={"javascript:void(0)"} onClick={this.addNewWord}>Add keyword</a>
+                                    </Message>
+
+                                    :
+
+                                    <List>
+
+                                        {searchResult.map((item, index) => {
+                                            return <WordDescription wordItem={item}/>
+                                        })}
+
+                                    </List>
 
 
-                                    }
+                                }
+                            </div>
+                        </div>
+
+                        :
+                        null
 
 
-                                </Grid.Column>
-                            </Grid.Row>
-
-                            :
-                            null
+                    }
 
 
-                        }
-
-
-
-
-                    </Grid>
 
 
                 </div>
@@ -120,7 +114,7 @@ class Search extends Component {
                   #search {
                     position:absolute;
                     z-index:10;
-                    width: 47%;
+                    width: 100%;
                   }
 
                   #overlay {

@@ -19,6 +19,10 @@ class MyApp extends App {
                     rel="stylesheet"
                     href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
                 />
+                <link
+                    rel="stylesheet"
+                    href="/static/css/bootstrap-grid.css"
+                />
                 <Provider store={store}>
                     <Component {...pageProps} />
                 </Provider>

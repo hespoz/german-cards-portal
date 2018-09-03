@@ -252,13 +252,17 @@ class NewWordForm extends Component {
 
                         <Form.Field>
                             <label>Article</label>
-                            <Form.Select name="article" options={optionsArticle} placeholder='Articles'
+                            <Form.Select name="article"
+                                         size='small'
+                                         options={optionsArticle} placeholder='Articles'
                                          value={this.state.article} error={this.state.article_error}
                                          onChange={this.onFormInputChange}/>
                         </Form.Field>
                         <Form.Field>
                             <label>Plural</label>
-                            <Form.Input name="plural" placeholder='Plural' value={this.state.plural}
+                            <Form.Input name="plural"
+                                        size='small'
+                                        placeholder='Plural' value={this.state.plural}
                                         error={this.state.plural_error} onChange={this.onFormInputChange}/>
                         </Form.Field>
 
@@ -275,7 +279,7 @@ class NewWordForm extends Component {
 
                         <Form.Field>
                             <label>Article</label>
-                            <Form.Input name="perfect" placeholder='Perfect' value={this.state.perfect}
+                            <Form.Input name="perfect" placeholder='Perfect' size='small' value={this.state.perfect}
                                         error={this.state.perfect_error} onChange={this.onFormInputChange}/>
                         </Form.Field>
 
@@ -291,42 +295,42 @@ class NewWordForm extends Component {
                                 <Table.Row>
                                     <Table.Cell>ich</Table.Cell>
                                     <Table.Cell>
-                                        <Form.Input name="ich" value={this.state.ich}
+                                        <Form.Input name="ich" size='small' value={this.state.ich}
                                                     error={this.state.ich_error} onChange={this.onFormInputChange}/>
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>du</Table.Cell>
                                     <Table.Cell>
-                                        <Form.Input name="du" value={this.state.du}
+                                        <Form.Input name="du" size='small' value={this.state.du}
                                                     error={this.state.du_error} onChange={this.onFormInputChange}/>
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>er/sie/es</Table.Cell>
                                     <Table.Cell>
-                                        <Form.Input name="erSieEs" value={this.state.erSieEs}
+                                        <Form.Input name="erSieEs" size='small' value={this.state.erSieEs}
                                                     error={this.state.erSieEs_error} onChange={this.onFormInputChange}/>
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>ihr</Table.Cell>
                                     <Table.Cell>
-                                        <Form.Input name="ihr" value={this.state.ihr}
+                                        <Form.Input name="ihr" size='small' value={this.state.ihr}
                                                     error={this.state.ihr_error} onChange={this.onFormInputChange}/>
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>wir</Table.Cell>
                                     <Table.Cell>
-                                        <Form.Input name="wir" value={this.state.wir}
+                                        <Form.Input name="wir" size='small' value={this.state.wir}
                                                     error={this.state.wir_error} onChange={this.onFormInputChange}/>
                                     </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>Sie</Table.Cell>
                                     <Table.Cell>
-                                        <Form.Input name="Sie" value={this.state.Sie}
+                                        <Form.Input name="Sie" size='small' value={this.state.Sie}
                                                     error={this.state.Sie_error} onChange={this.onFormInputChange}/>
                                     </Table.Cell>
                                 </Table.Row>
@@ -344,13 +348,13 @@ class NewWordForm extends Component {
                     <div>
                         <Form.Field>
                             <label>Spanish translation</label>
-                            <Form.Input name="esTranslation" placeholder='Spanish translation'
+                            <Form.Input name="esTranslation" size='small' placeholder='Spanish translation'
                                         value={this.state.esTranslation} error={this.state.esTranslation_error}
                                         onChange={this.onFormInputChange}/>
                         </Form.Field>
                         <Form.Field>
                             <label>English translation</label>
-                            <Form.Input name="enTranslation" placeholder='English translation'
+                            <Form.Input name="enTranslation" size='small' placeholder='English translation'
                                         value={this.state.enTranslation} error={this.state.enTranslation_error}
                                         onChange={this.onFormInputChange}/>
                         </Form.Field>
